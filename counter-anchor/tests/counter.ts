@@ -19,9 +19,6 @@ describe("counter", () => {
     try {
       const txSig = await program.methods
         .initialize()
-        // .accounts({
-        //   counter: counterPDA,
-        // })
         .rpc();
 
       const accountData = await program.account.counter.fetch(counterPDA);
@@ -36,9 +33,6 @@ describe("counter", () => {
   it("Increment", async () => {
     const transactionSignature = await program.methods
       .increment()
-      // .accounts({
-      //   counter: counterPDA,
-      // })
       .rpc();
 
     const accountData = await program.account.counter.fetch(counterPDA);

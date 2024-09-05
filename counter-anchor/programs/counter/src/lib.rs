@@ -31,8 +31,8 @@ pub struct Initialize<'info> {
     // Create and initialize `Counter` account using a PDA as the address
     #[account(
         init,
-        seeds = [b"counter"], // optional seeds for pda
-        bump,                 // bump seed for pda
+        seeds = [b"counter"],
+        bump,
         payer = user,
         space = 8 + Counter::INIT_SPACE
     )]
@@ -42,10 +42,9 @@ pub struct Initialize<'info> {
 
 #[derive(Accounts)]
 pub struct Increment<'info> {
-    // The address of the `Counter` account must be a PDA derived with the specified `seeds`
     #[account(
         mut,
-        seeds = [b"counter"], // optional seeds for pda
+        seeds = [b"counter"],
         bump = counter.bump,  // bump seed for pda stored in `Counter` account
     )]
     pub counter: Account<'info, Counter>,
@@ -54,6 +53,6 @@ pub struct Increment<'info> {
 #[account]
 #[derive(InitSpace)]
 pub struct Counter {
-    pub count: u64, // 8 bytes
-    pub bump: u8,   // 1 byte
+    pub count: u64,
+    pub bump: u8,
 }
