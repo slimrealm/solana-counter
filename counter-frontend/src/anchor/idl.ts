@@ -1,59 +1,116 @@
+/**
+ * Program IDL in camelCase format in order to be used in JS/TS.
+ *
+ * Note that this is only a type helper and is not the actual IDL. The original
+ * IDL can be found at `target/idl/counter.json`.
+ */
 export type Counter = {
-    "version": "0.2.0",
-    "name": "counter",
+    "address": "xYJyHeGqUt4FRvt3YHUwyZHjrWyF6G2ZSGKy8eJ4kZr",
+    "metadata": {
+        "name": "counter",
+        "version": "0.1.0",
+        "spec": "0.1.0",
+        "description": "Created with Anchor"
+    },
     "instructions": [
         {
-            "name": "initialize",
+            "name": "increment",
+            "discriminator": [
+                11,
+                18,
+                104,
+                9,
+                104,
+                174,
+                59,
+                33
+            ],
             "accounts": [
                 {
-                    "name": "user",
-                    "isMut": true,
-                    "isSigner": true
-                },
-                {
                     "name": "counter",
-                    "isMut": true,
-                    "isSigner": false,
+                    "writable": true,
                     "pda": {
                         "seeds": [
                             {
                                 "kind": "const",
-                                "type": "string",
-                                "value": "counter"
+                                "value": [
+                                    99,
+                                    111,
+                                    117,
+                                    110,
+                                    116,
+                                    101,
+                                    114
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "args": []
+        },
+        {
+            "name": "initialize",
+            "discriminator": [
+                175,
+                175,
+                109,
+                31,
+                13,
+                152,
+                155,
+                237
+            ],
+            "accounts": [
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "counter",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    99,
+                                    111,
+                                    117,
+                                    110,
+                                    116,
+                                    101,
+                                    114
+                                ]
                             }
                         ]
                     }
                 },
                 {
                     "name": "systemProgram",
-                    "isMut": false,
-                    "isSigner": false
-                }
-            ],
-            "args": []
-        },
-        {
-            "name": "increment",
-            "accounts": [
-                {
-                    "name": "counter",
-                    "isMut": true,
-                    "isSigner": false,
-                    "pda": {
-                        "seeds": [
-                            {
-                                "kind": "const",
-                                "type": "string",
-                                "value": "counter"
-                            }
-                        ]
-                    }
+                    "address": "11111111111111111111111111111111"
                 }
             ],
             "args": []
         }
     ],
     "accounts": [
+        {
+            "name": "counter",
+            "discriminator": [
+                255,
+                176,
+                4,
+                245,
+                188,
+                253,
+                124,
+                25
+            ]
+        }
+    ],
+    "types": [
         {
             "name": "counter",
             "type": {
@@ -74,61 +131,112 @@ export type Counter = {
 };
 
 export const IDL: Counter = {
-    "version": "0.2.0",
-    "name": "counter",
+    "address": "xYJyHeGqUt4FRvt3YHUwyZHjrWyF6G2ZSGKy8eJ4kZr",
+    "metadata": {
+        "name": "counter",
+        "version": "0.1.0",
+        "spec": "0.1.0",
+        "description": "Created with Anchor"
+    },
     "instructions": [
         {
-            "name": "initialize",
+            "name": "increment",
+            "discriminator": [
+                11,
+                18,
+                104,
+                9,
+                104,
+                174,
+                59,
+                33
+            ],
             "accounts": [
                 {
-                    "name": "user",
-                    "isMut": true,
-                    "isSigner": true
-                },
-                {
                     "name": "counter",
-                    "isMut": true,
-                    "isSigner": false,
+                    "writable": true,
                     "pda": {
                         "seeds": [
                             {
                                 "kind": "const",
-                                "type": "string",
-                                "value": "counter"
+                                "value": [
+                                    99,
+                                    111,
+                                    117,
+                                    110,
+                                    116,
+                                    101,
+                                    114
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "args": []
+        },
+        {
+            "name": "initialize",
+            "discriminator": [
+                175,
+                175,
+                109,
+                31,
+                13,
+                152,
+                155,
+                237
+            ],
+            "accounts": [
+                {
+                    "name": "user",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "counter",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    99,
+                                    111,
+                                    117,
+                                    110,
+                                    116,
+                                    101,
+                                    114
+                                ]
                             }
                         ]
                     }
                 },
                 {
                     "name": "systemProgram",
-                    "isMut": false,
-                    "isSigner": false
-                }
-            ],
-            "args": []
-        },
-        {
-            "name": "increment",
-            "accounts": [
-                {
-                    "name": "counter",
-                    "isMut": true,
-                    "isSigner": false,
-                    "pda": {
-                        "seeds": [
-                            {
-                                "kind": "const",
-                                "type": "string",
-                                "value": "counter"
-                            }
-                        ]
-                    }
+                    "address": "11111111111111111111111111111111"
                 }
             ],
             "args": []
         }
     ],
     "accounts": [
+        {
+            "name": "counter",
+            "discriminator": [
+                255,
+                176,
+                4,
+                245,
+                188,
+                253,
+                124,
+                25
+            ]
+        }
+    ],
+    "types": [
         {
             "name": "counter",
             "type": {
