@@ -20,10 +20,8 @@ yarn
 anchor build 
 anchor keys sync
 ```
-Replace all 3 remaining instances of "xYJyHeGqUt4FRvt3YHUwyZHjrWyF6G2ZSGKy8eJ4kZr" with the newly generated ID in your lib.rs:  
-from this line:  ```declare_id!("<YourProgramIdHere>");```  
-(1 instance in:  /counter-anchor/Anchor.toml)  
-(2 instances in:  /counter-frontend/src/anchor/idl.ts)
+Replace the 2 instances of "xYJyHeGqUt4FRvt3YHUwyZHjrWyF6G2ZSGKy8eJ4kZr" in /counter-frontend/src/anchor/idl.ts with the newly generated ID in your /counter-anchor/programs/counter/src/lib.rs.  
+(from this line:  ```declare_id!("<YourProgramIdHere>");``` )
 
 Then:
 ```
